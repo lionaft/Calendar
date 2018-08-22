@@ -9,6 +9,18 @@ public class Date {
         return Months.values()[month].name();
     }
 
+    public int getDay() {
+        return day;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
     public Date(int day, int month, int year) {
         this.day = day;
         this.month = month;
@@ -23,6 +35,10 @@ public class Date {
 
     public String ToLongDate() {
         return String.format("%d",day) + DayOfMonthSuffix() + " " + MonthName() + " " + String.format("%4d",year);
+    }
+
+    public boolean dateOlder(Date date) {
+        return date.year > year || date.month > month || date.day > day;
     }
 
 

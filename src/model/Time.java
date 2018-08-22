@@ -26,4 +26,8 @@ public class Time {
         }
         return hour12 + ":" + String.format("%02d",minute) + app;
     }
+
+    public boolean timeOlder(Time time) {
+        return time.hour > hour || time.minute > minute;
+    }
 }
